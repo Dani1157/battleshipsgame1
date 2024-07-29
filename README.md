@@ -118,3 +118,39 @@ Deployment & Local Development
 The game is designed to be played locally in a terminal environment.
 
 The third project was developed through Gitpod, using the template provided by Code Institute. Every step was documented and pushed thoroughly via GitHub.
+
+#### Github
+Login (or sign up) to Github.
+Find the repository for this project, 
+Click on the Settings link.
+Click on the Pages link in the left-hand side navigation bar.
+In the Source section, choose main from the drop-down select branch menu. Select Root from the drop-down select folder menu.
+Click Save. Your live Github Pages site is now deployed at the URL shown.cal machine.
+
+#### Heroku
+
+Log in or register a new account on Heroku
+Click on 'New' in the dashboard and select 'Create New App'
+Select a name for the app and choose your region.
+Click on "Create app"
+When the app is created click on Setting
+To improve compatibility with various Python libraries add Config Var with Key = PORT and the Value = 8000
+Add 2 buildpacks: Python and then Nodejs in this specific order
+Go back at the top and click on "Deploy" and select "GitHub"
+Scroll down and click on 'Connect to GitHub'
+Search for your GitHub repository name by typing it
+Click on "Connect"
+Scroll down and click on "Deploy Branch"
+You will see a message "The app was successfully deployed" when the app is built with python and all the depencencies
+Click on view and you will see the deployed site
+
+#### Local Development
+
+##### How to Clone
+
+Login (or sign up) to GitHub.
+Go to the repository for this project, MrHaJu/Code-Institute-Projekt-3-PYTHON-battleship.
+Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
+Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
