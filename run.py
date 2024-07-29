@@ -1,4 +1,9 @@
-"""
+import random
+import time
+import os
+
+"""""
+
     -------BATTLESHIPS-------
     How it will work:
     1. A 10x10 grid will have 8 ships of variable length randomly placed about
@@ -16,3 +21,20 @@
     3. "X" = part of ship that was hit with bullet
     4. "#" = water that was shot with bullet, a miss because it hit no ship
 """
+
+# Global variable for grid
+grid = [[]]
+# Global variable for grid size
+grid_size = 10
+# Global variable for number of ships to place
+num_of_ships = 4
+# Global variable for bullets left
+bullets_left = 20
+# Global variable for game over
+game_over = False
+# Global variable for number of ships sunk
+num_of_ships_sunk = 0
+# Global variable for ship positions
+ship_positions = [[]]
+# Global variable for alphabet
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
