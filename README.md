@@ -51,28 +51,30 @@ The game was programmed in Python to use the terminal. Since the game is text-ba
 Features
 Game Start, Player has a certain amount of bullets to Tack down the enemy ships. A small instruction of what to do is shown.
 
+![Game Start, Player has to place Certain amount of bullets](assets/testing/images/player-choice.png)
 
 After The computer Places all there ships, there is a description of the game. The game starts automatically.
 
 At first, the player has to choose a column A-3
 
-
+![Game start: Player has to choose a column A-H to guess where the Computer ships are ](assets/testing/images/ingame.png)
 
 
 If the player hits a computer ship, it will be pointed out with a hit message.
 
+![In the game, the player hits a computer ship](assets/testing/images/ingame-hit.png)
 
 If the player misses a computer ship it shows the miss message.
 
-
+![In the game, the player misses a computer ship](assets/testing/images/ingame-miss.png)
 
 If the player wins the game, the game shows the "You win" message as shown in the image below:
 
-
+![Player wins the game](assets/testing/images/win.png)
 
 If the player loses the game, the game shows the "You loose" message:
 
-
+![Player looses the game](assets/testing/images/loose.png)
 
 
 After win, loss , the game ends.
