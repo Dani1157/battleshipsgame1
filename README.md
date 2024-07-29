@@ -81,3 +81,19 @@ After win, loss , the game ends.
 
 
 ---
+
+#### Game Mechanics
+
+The game lets the player Choose How many bullets they want.
+The player can make guesses to target the computer's ships.
+
+The game keeps track of the remaining bullets and ships for both the player and the computer.
+The game ends when the player sinks all the opponent's ships or when the bullets run out.
+
+#### User Interface
+The game is played in the terminal, providing a simple and text-based user interface.
+The player is shown their board with their Number of bullets.
+The player can see the computer's board to track their hits and misses.
+#### Interaction
+The player can interact with the game by inputting coordinates for their guesses.
+The game provides clear messages for hits, misses, and game outcomes.
