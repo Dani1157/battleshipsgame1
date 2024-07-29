@@ -79,7 +79,6 @@ If the player loses the game, the game shows the "You loose" message:
 
 After win, loss , the game ends.
 
-
 ---
 
 #### Game Mechanics
@@ -97,3 +96,25 @@ The player can see the computer's board to track their hits and misses.
 #### Interaction
 The player can interact with the game by inputting coordinates for their guesses.
 The game provides clear messages for hits, misses, and game outcomes.
+
+#### Technologies Used
+
+Python: The programming language used to build the game logic.
+
+#### Languages Used
+
+Python: The main language used for programming the game.
+
+#### Frameworks, Libraries & Programs Used
+
+Gitpod: The code editor used for development.
+Git & GitHub: Used for version control and project collaboration.
+Github - To save and store the files.
+Heroku for final deployment.
+
+Deployment & Local Development
+#### Deployment
+
+The game is designed to be played locally in a terminal environment.
+
+The third project was developed through Gitpod, using the template provided by Code Institute. Every step was documented and pushed thoroughly via GitHub.
