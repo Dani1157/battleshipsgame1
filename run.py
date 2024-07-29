@@ -57,7 +57,8 @@ def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
 def try_to_place_ship_on_grid(row, col, direction, length):
     global grid_size
 
-    start_row, end_row, start_col, end_col = row, row + 1, col, col + 1
+    start_row, end_row = row, row + 1
+    start_col, end_col = col, col + 1
 
     if direction == "left":
         if col - length < 0:
@@ -94,7 +95,9 @@ def create_grid():
         random_col = random.randint(0, grid_size - 1)
         direction = random.choice(["left", "right", "up", "down"])
         ship_size = random.randint(3, 5)
-        if try_to_place_ship_on_grid(random_row, random_col, direction, ship_size):
+        if try_to_place_ship_on_grid(
+            random_row, random_col, direction, ship_size
+        ):
             num_of_ships_placed += 1
 
 
@@ -115,18 +118,21 @@ def print_grid(debug_mode=False):
 
 def accept_valid_bullet_placement():
     global alphabet, grid
-
     while True:
-        placement = input("Enter row (A-J) and column (0-9) such as A3: ").upper()
+        placement = input(
+            "Enter row (A-J) and column (0-9) such as A3: "
+        ).upper()
         if len(placement) != 2:
             print("Error: Please enter only one row and column such as A3")
             continue
         row, col = placement[0], placement[1]
         if not row.isalpha() or not col.isnumeric():
-            print("Error: Please enter letter (A-J) for row and (0-9) for column")
+            print("Error: Enter letter (A-J) for row and (0-9) for column")
             continue
         row = alphabet.find(row)
-        if row == -1 or not (0 <= row < grid_size) or not (0 <= int(col) < grid_size):
+        if (row == -1 or
+            not (0 <= row < grid_size) or
+                not (0 <= int(col) < grid_size)):
             print("Error: Invalid row or column, please enter again")
             continue
         col = int(col)
@@ -200,7 +206,7 @@ def main():
         check_for_game_over()
 
     print_grid(debug_mode=True)  # Show final grid after game over
-    
-    
+
+
 if __name__ == '__main__':
     main()
