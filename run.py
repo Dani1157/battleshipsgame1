@@ -2,8 +2,7 @@ import random
 import time
 import os
 
-"""""
-
+"""
     -------BATTLESHIPS-------
     How it will work:
     1. A 10x10 grid will have 8 ships of variable length randomly placed about
@@ -38,6 +37,12 @@ num_of_ships_sunk = 0
 ship_positions = [[]]
 # Global variable for alphabet
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+# Function to clear the terminal
+def clear_terminal():
+    os.system("cls" if os.name == "nt" else "clear")
+
 
 def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
     """
@@ -237,4 +242,27 @@ def check_for_game_over():
         print("Sorry, you lost! You ran out of bullets, try again next time!")
         game_over = True
 
-        
+def main():
+    """Main entry point of application that runs the game loop"""
+    global game_over
+
+    clear_terminal()
+    print("-----Welcome to Battleships-----")
+    print("You have 50 bullets to take down 8 ships, may the battle begin!")
+
+    create_grid()
+
+    while not game_over:
+        print_grid()
+        print("Number of ships remaining:", num_of_ships - num_of_ships_sunk)
+        print("Number of bullets left:", bullets_left)
+        shoot_bullet()
+        print("----------------------------")
+        check_for_game_over()
+
+    print_grid()  # Show final grid after game over
+
+
+if __name__ == '__main__':
+    main()
+    
