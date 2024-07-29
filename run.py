@@ -31,8 +31,10 @@ num_of_ships_sunk = 0
 ship_positions = []
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+
 def clear_terminal():
     os.system("cls" if os.name == "nt" else "clear")
+
 
 def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
     global grid, ship_positions
@@ -50,6 +52,7 @@ def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
             for c in range(start_col, end_col):
                 grid[r][c] = "O"
     return all_valid
+
 
 def try_to_place_ship_on_grid(row, col, direction, length):
     global grid_size
@@ -75,6 +78,7 @@ def try_to_place_ship_on_grid(row, col, direction, length):
 
     return validate_grid_and_place_ship(start_row, end_row, start_col, end_col)
 
+
 def create_grid():
     global grid, grid_size, num_of_ships, ship_positions
 
@@ -93,6 +97,7 @@ def create_grid():
         if try_to_place_ship_on_grid(random_row, random_col, direction, ship_size):
             num_of_ships_placed += 1
 
+
 def print_grid(debug_mode=False):
     global grid, alphabet
 
@@ -106,6 +111,7 @@ def print_grid(debug_mode=False):
             else:
                 print(grid[row][col], end=" ")
         print("")
+
 
 def accept_valid_bullet_placement():
     global alphabet, grid
@@ -129,6 +135,7 @@ def accept_valid_bullet_placement():
             continue
         return row, col
 
+
 def check_for_ship_sunk(row, col):
     global ship_positions, grid
 
@@ -141,6 +148,7 @@ def check_for_ship_sunk(row, col):
                         return False
             return True
     return False
+
 
 def shoot_bullet():
     global grid, num_of_ships_sunk, bullets_left
@@ -162,6 +170,7 @@ def shoot_bullet():
 
     bullets_left -= 1
 
+
 def check_for_game_over():
     global num_of_ships_sunk, num_of_ships, bullets_left, game_over
 
@@ -171,6 +180,7 @@ def check_for_game_over():
     elif bullets_left <= 0:
         print("Sorry, you lost! You ran out of bullets, try again next time!")
         game_over = True
+
 
 def main():
     global game_over
@@ -190,6 +200,7 @@ def main():
         check_for_game_over()
 
     print_grid(debug_mode=True)  # Show final grid after game over
-
+    
+    
 if __name__ == '__main__':
     main()
