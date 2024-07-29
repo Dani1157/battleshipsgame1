@@ -44,3 +44,38 @@ The user should be able to play the game without any knowledge of the game
 I want to find out how the game works
 I want to win against the computer
 ---
+
+Design
+The game was programmed in Python to use the terminal. Since the game is text-based, it has no real design
+
+Features
+Game Start, Player has a certain amount of bullets to Tack down the enemy ships. A small instruction of what to do is shown.
+
+
+After The computer Places all there ships, there is a description of the game. The game starts automatically.
+
+At first, the player has to choose a column A-3
+
+
+
+
+If the player hits a computer ship, it will be pointed out with a hit message.
+
+
+If the player misses a computer ship it shows the miss message.
+
+
+
+If the player wins the game, the game shows the "You win" message as shown in the image below:
+
+
+
+If the player loses the game, the game shows the "You loose" message:
+
+
+
+
+After win, loss , the game ends.
+
+
+---
