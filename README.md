@@ -154,3 +154,27 @@ Click on the code button, select whether you would like to clone with HTTPS, SSH
 Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
+## **Testing**
+
+Please view the [testing.md](testing.md) file for more information on the testing undertaken.
+
+- - -
+
+## Credits
+
+#### Code Used
+
+* [W3 schools to find ways to solve problems and improve the code](https://www.w3schools.com/)
+
+#### Content
+
+* The README template was adapted from the Code Institute README template.
+
+
+#### Media
+
+* No media is used in this text-based game.
+
+### Acknowledgments
+
+* Special thanks to [Vernell](https://github.com/VCGithubCode/) for providing guidance and support during the development of this project.
