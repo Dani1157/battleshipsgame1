@@ -1,3 +1,57 @@
+import random
+import time
+import os
+
+"""
+    -------BATTLESHIPS-------
+    How it will work:
+    1. A 10x10 grid will have 8 ships of variable length randomly placed about.
+    2. You will have 50 bullets to take down the ships that are placed down.
+    3. You can choose a row and column such as A3 to indicate where to shoot.
+    4. For every shot that hits or misses it will show up in the grid.
+    5. A ship cannot be placed diagonally, so if a shot hits, the rest of
+       the ship is in one of 4 directions: left, right, up, or down.
+    6. If all ships are unearthed before using up all bullets, you win;
+       else, you lose.
+
+    Legend:
+    1. "." = water or empty space
+    2. "O" = part of ship
+    3. "X" = part of ship that was hit with bullet
+    4. "#" = water that was shot with bullet, a miss because it hit no ship
+"""
+
+# Global Variables
+grid = []
+grid_size = 10
+num_of_ships = 8
+bullets_left = 50
+game_over = False
+num_of_ships_sunk = 0
+ship_positions = []
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+def clear_terminal():
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
+    global grid, ship_positions
+
+    all_valid = True
+    for r in range(start_row, end_row):
+        for c in range(start_col, end_col):
+            if grid[r][c] != ".":
+                all_valid = False
+                break
+
+    if all_valid:
+        ship_positions.append([start_row, end_row, start_col, end_col])
+        for r in range(start_row, end_row):
+            for c in range(start_col, end_col):
+                grid[r][c] = "O"
+    return all_valid
 
 def try_to_place_ship_on_grid(row, col, direction, length):
     global grid_size
@@ -136,7 +190,6 @@ def check_for_game_over():
 def main():
     global game_over
     clear_terminal()  # Clear terminal before each turn
-    clear_terminal()
     print("-----Welcome to Battleships-----")
     print("You have 50 bullets to take down 8 ships, may the battle begin!")
 
