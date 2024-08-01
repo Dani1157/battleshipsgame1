@@ -21,7 +21,7 @@
 
 ### CI Python Linter
 
-![Testing](assets/testing/images/)
+![Testing](assets/testing/images/code.png)
 
 ### Grammarly
 
