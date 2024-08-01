@@ -20,7 +20,7 @@ battleships game
   * [Local Development](#Local-Development)
     * [How to Fork](#How-to-Fork)
     * [How to Clone](#How-to-Clone)
-    
+
 * [Testing](#Testing)
     
 * [Credits](#Credits)
@@ -34,6 +34,8 @@ battleships game
 ### Initial discussion
 In project 3 I programmed a game called "Battleship".
 The game is a simple  Battleship game. But this time it's a little different The player has a certain amount of bullets To take down the computerships That are randomly placed By the computer.
+
+[live project on Heroku](https://battleships-game10-cdec97573350.herokuapp.com/)
 
 User stories
 #### Client goals
