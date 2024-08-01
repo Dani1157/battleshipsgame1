@@ -1,242 +1,170 @@
-battleships game
+# Battleship Game
 
- ## Contents
+## Contents
 
-* [User Experience (UX)](#User-Experience-(UX))
-    * [Initial Discussion](#Initial-Discussion)
-    * [Client Goals](#Client-Goals)
+* [User Experience (UX)](#user-experience-ux)
+    * [Initial Discussion](#initial-discussion)
+    * [Client Goals](#client-goals)
+* [Design](#design)
+    * [Game Mechanics](#game-mechanics)
+    * [User Interface](#user-interface)
+    * [Interaction](#interaction)
+* [Features](#features)
+* [Technologies Used](#technologies-used)
+* [Deployment & Local Development](#deployment--local-development)
+    * [Deployment](#deployment)
+    * [Local Development](#local-development)
+        * [How to Fork](#how-to-fork)
+        * [How to Clone](#how-to-clone)
+* [Testing](#testing)
+* [Credits](#credits)
+    * [Code Used](#code-used)
+    * [Content](#content)
+    * [Media](#media)
+    * [Acknowledgments](#acknowledgments)
 
-* [Design](#Design)
+## User Experience (UX)
 
-  * [Wireframes](#Wireframes)
-  * [Features](#Features)
-  * [Accessibility](#Accessibility)
-  * [Technologies Used](#Technologies-Used)
-  * [Languages Used](#Languages-Used)
-  * [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+### Initial Discussion
+In Project 3, I programmed a game called **"Battleship."**  
+This simple Battleship game differs from traditional versions as players have a limited number of bullets to take down computer ships randomly placed by the computer.
 
-* [Deployment & Local Development](#Deployment-&-Local-Development)
-  * [Deployment](#Deployment)
-  * [Local Development](#Local-Development)
-    * [How to Fork](#How-to-Fork)
-    * [How to Clone](#How-to-Clone)
+**Live Project:** [Play on Heroku](https://battleships-game10-cdec97573350.herokuapp.com/)
 
-* [Testing](#Testing)
-    
-* [Credits](#Credits)
-  * [Code Used](#Code-Used)
-  * [Content](#Content)
-  * [Media](#Media)
-  * [Acknowledgments](#Acknowledgments)
+### Client Goals
+- **User**: Should be able to play the game without prior knowledge of it. 
+
+### First-time Visitor Goals
+- **Find out** how the game works.
+- **Win** against the computer.
+
+---
+
+## Design
+The game is programmed in Python to run in a terminal. As it is text-based, it features no visual design.
+
+## Features
+- **Game Start:** Players begin with a certain number of bullets to target the enemy ships. Instructions on what to do are displayed.
+
+    ![Game Start](assets/testing/images/player-choice.png)
+
+- After the computer places its ships, a game description is shown, and the game starts automatically.
   
-  ## User Experience (UX)
+- Initially, the player selects a column (e.g., A-3) to guess where the computer's ships are positioned.
 
-### Initial discussion
-In project 3 I programmed a game called "Battleship".
-The game is a simple  Battleship game. But this time it's a little different The player has a certain amount of bullets To take down the computerships That are randomly placed By the computer.
+    ![Game Start Selection](assets/testing/images/ingame.png)
 
-[live project on Heroku](https://battleships-game10-cdec97573350.herokuapp.com/)
+- Upon hitting a ship, a hit message is displayed:
 
-User stories
-#### Client goals
+    ![Hit Message](assets/testing/images/ingame-hit.png)
 
-The user should be able to play the game without any knowledge of the game
+- Missing a ship results in a miss message:
 
-#### First-time visitor goals
-I want to find out how the game works
-I want to win against the computer
----
+    ![Miss Message](assets/testing/images/ingame-miss.png)
 
-Design
-The game was programmed in Python to use the terminal. Since the game is text-based, it has no real design
+- Winning the game triggers a "You win" message:
 
-Features
-Game Start, Player has a certain amount of bullets to Tack down the enemy ships. A small instruction of what to do is shown.
+    ![You Win](assets/testing/images/win.png)
 
-![Game Start, Player has to place Certain amount of bullets](assets/testing/images/player-choice.png)
+- Losing the game displays a "You lose" message:
 
-After The computer Places all there ships, there is a description of the game. The game starts automatically.
+    ![You Lose](assets/testing/images/loose.png)
 
-At first, the player has to choose a column A-3
-
-![Game start: Player has to choose a column A-H to guess where the Computer ships are ](assets/testing/images/ingame.png)
-
-
-If the player hits a computer ship, it will be pointed out with a hit message.
-
-![In the game, the player hits a computer ship](assets/testing/images/ingame-hit.png)
-
-If the player misses a computer ship it shows the miss message.
-
-![In the game, the player misses a computer ship](assets/testing/images/ingame-miss.png)
-
-If the player wins the game, the game shows the "You win" message as shown in the image below:
-
-![Player wins the game](assets/testing/images/win.png)
-
-If the player loses the game, the game shows the "You loose" message:
-
-![Player looses the game](assets/testing/images/loose.png)
-
-
-After win, loss , the game ends.
+Upon finishing, the game ends.
 
 ---
 
-#### Game Mechanics
+### Game Mechanics
+- Players choose how many bullets they want.
+- Players guess to target the computer's ships.
+- The game tracks remaining bullets and ships for both players.
+- The game concludes when a player sinks all opponent's ships or runs out of bullets.
 
-The game lets the player Choose How many bullets they want.
-The player can make guesses to target the computer's ships.
+### User Interface
+- The game utilizes a simple, text-based interface in the terminal.
+- Players can view their board and track their bullets.
+- The computer's board is also visible for tracking hits and misses.
 
-The game keeps track of the remaining bullets and ships for both the player and the computer.
-The game ends when the player sinks all the opponent's ships or when the bullets run out.
+### Interaction
+- Players interact with the game by inputting coordinates for their guesses.
+- Clear messages are provided for hits, misses, and game outcomes.
 
-#### User Interface
-The game is played in the terminal, providing a simple and text-based user interface.
-The player is shown their board with their Number of bullets.
-The player can see the computer's board to track their hits and misses.
-#### Interaction
-The player can interact with the game by inputting coordinates for their guesses.
-The game provides clear messages for hits, misses, and game outcomes.
+## Technologies Used
+- **Python:** The programming language employed for game development.
 
-#### Technologies Used
+## Languages Used
+- **Python:** The primary language used for coding the game.
 
-Python: The programming language used to build the game logic.
-
-#### Languages Used
-
-Python: The main language used for programming the game.
-
-#### Frameworks, Libraries & Programs Used
-
-Gitpod: The code editor used for development.
-Git & GitHub: Used for version control and project collaboration.
-Github - To save and store the files.
-Heroku for final deployment.
+## Frameworks, Libraries & Programs Used
+- **Gitpod:** Code editor utilized for development.
+- **Git & GitHub:** Tools for version control and project collaboration.
+- **Heroku:** Platform for final deployment.
 
 ### List of Potential Improvements
+1. **Difficulty Levels:** Implement varied difficulty settings (Easy, Medium, Hard).
+2. **Ship Types and Sizes:** Introduce different ship categories with distinct sizes and special attributes.
+3. **Game Modes:** Add single-player mode and multiplayer support.
+4. **Visual Enhancements:** Create a GUI using libraries like Pygame or Tkinter.
+5. **Sound Effects and Music:** Incorporate sound effects for hits and game events.
+6. **Power-Ups or Special Abilities:** Introduce power-ups for players.
+7. **Game Statistics:** Track and display detailed stats after each game.
+8. **Save and Load Game Functionality:** Allow players to resume games later.
+9. **Tutorial or Help Menu:** Guide new players through rules and gameplay mechanics.
+10. **Leaderboard:** Display high scores and win/loss records.
+11. **Mobile or Online Version:** Adapt the game for mobile platforms or create a web version.
+12. **Enhanced Input Validation:** Handle unexpected inputs gracefully.
+13. **Achievements or Badges:** Unlock achievements through specific challenges.
+14. **Hints/Clues Mechanism:** Allow players to receive hints about nearby ships.
+15. **Customizable Game Settings:** Let players customize game parameters before starting.
+16. **Story Mode:** Incorporate a narrative-driven mode with missions and challenges.
 
-1. **Difficulty Levels:**
-   - Implement different difficulty settings (Easy, Medium, Hard) with varying numbers of ships, grid sizes, and bullet counts.
+## Deployment & Local Development
 
-2. **Ship Types and Sizes:**
-   - Introduce different ship types with predefined sizes (e.g., Destroyers, Cruisers, Battleships) and allow for special abilities or attributes for each type.
-   - Use more diverse ship sizes to increase strategy (e.g., ships of sizes 2 to 5).
+### Deployment
+The game is designed for local play in a terminal environment. It was developed through Gitpod, with comprehensive documentation pushed to GitHub.
 
-3. **Game Modes:**
-   - Add a single-player mode against AI (computer) opponents.
-   - Implement a multiplayer mode where two players can play against each other on separate grids.
-
-4. **Visual Enhancements:**
-   - Implement a graphical user interface (GUI) using libraries like Pygame or Tkinter for a more interactive experience.
-   - Create a more appealing text-based grid with better formatting or use external libraries for enhanced visuals.
-
-5. **Sound Effects and Music:**
-   - Incorporate sound effects for hits, misses, and game events to enhance the overall experience.
-   - Add background music that fits the theme of the game.
-
-6. **Power-Ups or Special Abilities:**
-   - Introduce power-ups that players can use during the game, such as additional bullets, radar to reveal ship positions, or a "fire again" ability.
-
-7. **Game Statistics:**
-   - Track detailed game statistics, such as number of hits, misses, accuracy, and average number of turns to win or lose.
-   - Show this data to players at the end of each game session.
-
-8. **Save and Load Game Functionality:**
-   - Allow players to save their current game state and resume later.
-   - Consider using JSON or a text file format for saving game data.
-
-9. **Tutorial or Help Menu:**
-   - Create an interactive tutorial that guides new players through the rules and gameplay mechanics.
-   - Implement a help command that players can use at any time during the game.
-
-10. **Leaderboard:**
-    - Implement a scoring system that tracks and displays high scores or win/loss records.
-    - Consider persistent storage for leaderboards that could be stored in files or databases.
-
-11. **Mobile or Online Version:**
-    - Adapt the game for mobile platforms or consider implementing a web-based version.
-
-12. **Enhanced Input Validation:**
-    - Expand the input validation system to handle unexpected inputs more gracefully.
-    - Create a more interactive input prompt with suggestions based on previous entries.
-
-13. **Achievements or Badges:**
-    - Create a system of achievements that players can unlock by completing certain challenges (e.g., sinking a ship with a single shot, winning with remaining bullets).
-
-14. **Hints/Clues Mechanism:**
-    - Allow players to spend bullets or use special abilities to receive hints about nearby ships.
-
-15. **Customizable Game Settings:**
-    - Permit players to customize their game settings, such as grid size, number of ships, and ship sizes before starting.
-
-16. **Story Mode:**
-    - Introduce a narrative-driven mode with missions, challenges, and progressively harder levels.
-
-
-Deployment & Local Development
-#### Deployment
-
-The game is designed to be played locally in a terminal environment.
-
-The third project was developed through Gitpod, using the template provided by Code Institute. Every step was documented and pushed thoroughly via GitHub.
-
-#### Github
-Login (or sign up) to Github.
-Find the repository for this project, 
-Click on the Settings link.
-Click on the Pages link in the left-hand side navigation bar.
-In the Source section, choose main from the drop-down select branch menu. Select Root from the drop-down select folder menu.
-Click Save. Your live Github Pages site is now deployed at the URL shown.cal machine.
+#### GitHub
+1. Log in (or sign up) to GitHub.
+2. Navigate to the project repository.
+3. Click on the **Settings** link.
+4. Click on the **Pages** link in the left-hand navigation bar.
+5. In the **Source** section, select **main** from the drop-down menu and **Root** from the drop-down folder menu.
+6. Click **Save**. Your live GitHub Pages site is now deployed.
 
 #### Heroku
+1. Log in or register on Heroku.
+2. Click on **New** in the dashboard and select **Create New App**.
+3. Choose an app name and region, then click **Create app**.
+4. Go to **Settings**, add a Config Var with Key = PORT and Value = 8000.
+5. Add buildpacks: Python followed by Node.js.
+6. Click on **Deploy**, select **GitHub**, and connect to your repository.
+7. Click **Deploy Branch** to build the app.
+8. After successful deployment, click on **View** to see the deployed site.
 
-Log in or register a new account on Heroku
-Click on 'New' in the dashboard and select 'Create New App'
-Select a name for the app and choose your region.
-Click on "Create app"
-When the app is created click on Setting
-To improve compatibility with various Python libraries add Config Var with Key = PORT and the Value = 8000
-Add 2 buildpacks: Python and then Nodejs in this specific order
-Go back at the top and click on "Deploy" and select "GitHub"
-Scroll down and click on 'Connect to GitHub'
-Search for your GitHub repository name by typing it
-Click on "Connect"
-Scroll down and click on "Deploy Branch"
-You will see a message "The app was successfully deployed" when the app is built with python and all the depencencies
-Click on view and you will see the deployed site
+### Local Development
 
-#### Local Development
+#### How to Clone
+1. Log in (or sign up) to GitHub.
+2. Go to the repository, **MrHaJu/Code-Institute-Projekt-3-PYTHON-battleship**.
+3. Click the **Code** button, and copy the HTTPS, SSH, or GitHub CLI link.
+4. Open the terminal in your code editor, navigate to the desired directory.
+5. Type `git clone`, paste the copied link, and press Enter.
 
-##### How to Clone
+## Testing
+Please see the [testing.md](testing.md) file for comprehensive testing information.
 
-Login (or sign up) to GitHub.
-Go to the repository for this project, MrHaJu/Code-Institute-Projekt-3-PYTHON-battleship.
-Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
-Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
-Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
-
-## **Testing**
-
-Please view the [testing.md](testing.md) file for more information on the testing undertaken.
-
-- - -
+---
 
 ## Credits
 
-#### Code Used
+### Code Used
+- [W3 Schools](https://www.w3schools.com/) for solutions and code improvements.
 
-* [W3 schools to find ways to solve problems and improve the code](https://www.w3schools.com/)
+### Content
+- This README template was adapted from the Code Institute README template.
 
-#### Content
-
-* The README template was adapted from the Code Institute README template.
-
-
-#### Media
-
-* No media is used in this text-based game.
+### Media
+- No media is used in this text-based game.
 
 ### Acknowledgments
-
-* Special thanks to [Vernell](https://github.com/VCGithubCode/) for providing guidance and support during the development of this project.
+- Special thanks to [Vernell](https://github.com/VCGithubCode/) for guidance and support during project development.
