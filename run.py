@@ -53,6 +53,7 @@ def validate_grid_and_place_ship(start_row, end_row, start_col, end_col):
                 grid[r][c] = "O"
     return all_valid
 
+
 def try_to_place_ship_on_grid(row, col, direction, length):
     global grid_size
 
