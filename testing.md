@@ -31,7 +31,7 @@
 
 ## MANUAL TESTING
 
-Here's a detailed testing sheet for the solved bugs based on the issues you encountered in your Battleship game code, along with their resolutions. This format provides a structured way to document the bugs and how they were resolved, which can be useful for future reference or for other developers reviewing your work.
+Here's a detailed testing sheet for the solved bugs based on the issues i encountered in my Battleship game code, along with their resolutions. 
 
 ### Bug Testing Sheet
 
