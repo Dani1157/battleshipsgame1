@@ -198,6 +198,7 @@ def main():
     create_grid()
 
     while not game_over:
+        clear_terminal()  # Clear terminal before each turn
         print_grid(debug_mode=False)
         print("If you would like to change the grid")
         print("go into the code and Change one of the variables.")
