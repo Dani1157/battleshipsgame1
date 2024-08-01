@@ -198,14 +198,17 @@ def main():
     create_grid()
 
     while not game_over:
-        print_grid(debug_mode=True)
+        print_grid(debug_mode=False)
+        print("If you would like to change the grid")
+        print("go into the code and Change one of the variables.")
+        print("It is the same with the bullets")
         print(f"Number of ships remaining: {num_of_ships - num_of_ships_sunk}")
         print(f"Number of bullets left: {bullets_left}")
         shoot_bullet()
         print("----------------------------")
         check_for_game_over()
 
-    print_grid(debug_mode=True)  # Show final grid after game over
+    print_grid(debug_mode=False)  # Show final grid after game over
 
 
 if __name__ == '__main__':
